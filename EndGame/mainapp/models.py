@@ -56,16 +56,16 @@ class AdvisorDatabase:
         self.mydb = self.client["advisor"]
 
 
-    def getData(self,filter={}):
+    def getData(self):
         mycol = self.mydb["data"]
         res={}
-        for x in mycol.find(filter,{"email":1,"password":1}):
+        for x in mycol.find({},{"email":1,"password":1}):
             res[x["email"]]=x["password"]
 
         return res
 
 
-    #unnecessary things by jd below
+
     '''def insertData(self, name, phoneNumber, email, dateOfBirth,type, gender, password, location=None):
         mycol = self.mydb["data"]
         if mycol.find_one({"email": email}) == None:
