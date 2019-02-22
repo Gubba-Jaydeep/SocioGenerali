@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.template import loader
+from .models import AdvisorDatabase
 
 
 # Create your views here.
@@ -9,4 +10,14 @@ def index(request):
 
 def dashboard(request):
     #retrieving data from form and validation and redirection to dashboard page
-    pass
+    db =  AdvisorDatabase()
+    dict_of_officials = db.getData()
+    uname = request.POST['username']
+    psw = request.POST['pass']
+    try:
+        if dict_of_officials[uname]==psw:
+            return render(request,'mainapp/sih/customers/customers.html',{})
+        else:
+            return render(request,'mainapp/index.html',{})
+    except:
+        return render(request,'mainapp/error.html',{})

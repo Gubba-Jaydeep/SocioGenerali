@@ -56,10 +56,10 @@ class AdvisorDatabase:
         self.mydb = self.client["advisor"]
 
 
-    def getData(self,filter={}):
+    def getData(self):
         mycol = self.mydb["data"]
         res={}
-        for x in mycol.find(filter,{"email":1,"password":1}):
+        for x in mycol.find({},{"email":1,"password":1}):
             res[x["email"]]=x["password"]
 
         return res
