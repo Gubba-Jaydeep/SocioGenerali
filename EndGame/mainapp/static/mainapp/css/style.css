@@ -233,7 +233,7 @@ Header
   transform: translateY(-50%);
   height: 16px;
   width: 16px;
-  background: url(../../../templates/mainapp/sih/img/cd-search.svg) no-repeat 0 0;
+  background: url(../img/cd-search.svg) no-repeat 0 0;
 }
 .cd-search input {
   padding-left: 32px;
@@ -439,7 +439,7 @@ Sidebar
   transform: translateY(-50%);
   height: 16px;
   width: 16px;
-  background: url(../../../templates/mainapp/sih/img/cd-nav-icons.svg) no-repeat 0 0;
+  background: url(../img/cd-nav-icons.svg) no-repeat 0 0;
 }
 .cd-side-nav > ul > li.overview > a::before {
   background-position: -64px 0;
@@ -641,7 +641,7 @@ Sidebar
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: url(../../../templates/mainapp/sih/img/cd-arrow.svg);
+  background: url(../img/cd-arrow.svg);
 }
 .has-children.selected > ul {
   display: block;

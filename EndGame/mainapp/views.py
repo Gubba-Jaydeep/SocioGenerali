@@ -6,7 +6,7 @@ from .models import AdvisorDatabase
 # Create your views here.
 
 def index(request):
-    return render(request, 'mainapp/sih/login form/login.html', {})
+    return render(request, 'mainapp/login.html', {})
 
 def dashboard(request):
     #retrieving data from form and validation and redirection to dashboard page
@@ -16,7 +16,7 @@ def dashboard(request):
     psw = request.POST['pass']
     try:
         if dict_of_officials[uname]==psw:
-            return render(request,'mainapp/sih/customers/customers.html',{})
+            return render(request,'mainapp/customers.html',{})
         else:
             return render(request,'mainapp/index.html',{})
     except:

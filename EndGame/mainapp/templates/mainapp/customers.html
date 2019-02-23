@@ -1,4 +1,5 @@
 <!doctype html>
+{% load staticfiles %}
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
@@ -7,17 +8,19 @@
 	<title>Fresh Bootstrap Table by Creative Tim</title>
 
 
-	<link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <link href="assets/css/fresh-bootstrap-table.css" rel="stylesheet" />
+
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-	<link rel="stylesheet" href="../../../../static/mainapp/css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="../../../../static/mainapp/css/style.css"> <!-- Resource style -->
-	<script src="../../../../static/mainapp/js/modernizr.js"></script> <!-- Modernizr -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+
+	<link href="{% static 'mainapp/customers/assets/css/bootstrap.css'%}" rel="stylesheet" />
+    <link href="{% static 'mainapp/customers/assets/css/fresh-bootstrap-table.css' %}" rel="stylesheet" />
+	<link rel="stylesheet" href="{% static 'mainapp/css/reset.css' %}"> <!-- CSS reset -->
+	<link rel="stylesheet" href="{% static 'mainapp/css/style.css' %}"> <!-- Resource style -->
+	<script src="{% static 'mainapp/js/modernizr.js' %}"></script> <!-- Modernizr -->
+
         
 </head>
 <body  style="background: black">
@@ -41,7 +44,7 @@
 					<ul>
 						<li><a href="#0">My Account</a></li>
 						<li><a href="#0">Edit Account</a></li>
-						<li><a href="../login form/login.html" target="_self">Logout</a></li>
+						<li><a href="login.html" target="_self">Logout</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -53,7 +56,7 @@
 				<li class="cd-label">Main</li>
 				<li class="has-children overview"><a href="customers.html">Home</a></li>
 				<li class="has-children overview"><a href="customers.html">Customers</a></li>
-				<li class="has-children overview"><a href="../contact form/contact.html">Contact Customer</a></li>
+				<li class="has-children overview"><a href="contact.html">Contact Customer</a></li>
 
 				<li class="has-children notifications active">
 					<a href="#0">Notifications<span class="count">3</span></a>
@@ -79,7 +82,7 @@
 
 			<ul>
 				<li class="cd-label">Action</li>
-				<li class="action-btn"><a href="../login form/login.html" target="_self">Logout</a></li>
+				<li class="action-btn"><a href="login.html" target="_self">Logout</a></li>
 			</ul>
 		</nav>
 	<div>
@@ -901,8 +904,8 @@
 	
 </main>
 </body>
-<script type="text/javascript" src="assets/js/bootstrap.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap-table.js"></script>
+<script type="text/javascript" src="../../static/mainapp/customers/assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../../static/mainapp/customers/assets/js/bootstrap-table.js"></script>
         
     <script type="text/javascript">
         var $table = $('#fresh-table'),

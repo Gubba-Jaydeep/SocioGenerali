@@ -1,17 +1,19 @@
 <!doctype html>
 <html lang="en" class="no-js">
+{% load staticfiles %}
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-	<link rel="icon" type="image/png" href="favicon.ico"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../../../../static/mainapp/css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="../../../../static/mainapp/css/style.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="contact.css">
-	<script src="../../../../static/mainapp/js/modernizr.js"></script> <!-- Modernizr -->
+
+
+	<link rel="stylesheet" href="{% static 'mainapp/css/reset.css' %}"> <!-- CSS reset -->
+	<link rel="stylesheet" href="{% static 'mainapp/css/style.css' %}"> <!-- Resource style -->
+	<link rel="stylesheet" href="{% static 'mainapp/contact%20form/contact.css' %}">
+	<script src="{% static 'mainapp/js/modernizr.js' %}"></script> <!-- Modernizr -->
   	
 	<title>Responsive Sidebar Navigation | CodyHouse</title>
 </head>
@@ -52,8 +54,8 @@
 		<nav class="cd-side-nav">
 			<ul>
 				<li class="cd-label">Main</li>
-				<li class="has-children overview"><a href="../customers/customers.html">Home</a></li>
-				<li class="has-children overview"><a href="../customers/customers.html">Customers</a></li>
+				<li class="has-children overview"><a href="customers.html">Home</a></li>
+				<li class="has-children overview"><a href="customers.html">Customers</a></li>
 				<li class="has-children overview"><a href="contact.html">Contact Customer</a></li>
 
 				<li class="has-children notifications active">
@@ -80,7 +82,7 @@
 
 			<ul>
 				<li class="cd-label">Action</li>
-				<li class="action-btn"><a href="../login form/login.html" target="_self">Logout</a></li>
+				<li class="action-btn"><a href="login.html" target="_self">Logout</a></li>
 			</ul>
 		</nav>
 
@@ -88,7 +90,7 @@
 		<div class="contact1" style="height: 100%;margin-top: 54px;padding-bottom: 93px">
 		<div class="container-contact1">
 			<div class="contact1-pic js-tilt" data-tilt>
-				<img src="images/img-01.png" alt="IMG">
+				<img src="../../static/mainapp/contact%20form/images/img-01.png" alt="IMG">
 			</div>
 
 			<form class="contact1-form validate-form">
@@ -130,7 +132,7 @@
 	</div>
 		</div> <!-- .content-wrapper -->
 	</main> <!-- .cd-main-content -->
-<script src="../../../../static/mainapp/js/jquery.menu-aim.js"></script>
-<script src="../../../../static/mainapp/js/main.js"></script> <!-- Resource jQuery -->
+<script src="../../static/mainapp/js/jquery.menu-aim.js"></script>
+<script src="../../static/mainapp/js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html>
