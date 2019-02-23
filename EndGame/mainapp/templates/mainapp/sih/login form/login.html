@@ -1,18 +1,20 @@
+{% load staticfiles %}
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-	<link rel="icon" type="image/png" href="favicon.ico"/>
+	<link rel="icon" type="image/png" href="../../../../static/mainapp/images/favicon.ico"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="Login css/util.css">
-	<link rel="stylesheet" type="text/css" href="Login css/main.css">
-	<link rel="stylesheet" href="../css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="../css/style.css"> <!-- Resource style -->
-	<script src="../js/modernizr.js"></script> <!-- Modernizr -->
+	<link rel="stylesheet" type="text/css" href="{% static 'mainapp/Login css/util.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'mainapp/Login css/main.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'mainapp/css/reset.css' %}"><!-- reset css-->
+<link rel="stylesheet" type="text/css" href="{% static 'mainapp/css/style.css' %}">    <!-- Resource style -->
+	<script src="mainapp/js/modernizr.js"></script> <!-- Modernizr -->
   	
 	<title>Responsive Sidebar Navigation | CodyHouse</title>
 </head>
@@ -85,7 +87,7 @@
 		</nav>
 
 		<div class="content-wrapper" style="padding: 0px">
-		<div class="container-login100" style="background-image: url('bg.jpg');">
+		<div class="container-login100" style="background-image: url('../../../../static/mainapp/images/bg.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form class="login100-form validate-form" method="post" action="{% url 'mainapp:dashboard' %}">
 				{% csrf_token %}
@@ -133,7 +135,7 @@
 	</div>
 		</div> <!-- .content-wrapper -->
 	</main> <!-- .cd-main-content -->
-<script src="../js/jquery.menu-aim.js"></script>
-<script src="../js/main.js"></script> <!-- Resource jQuery -->
+<script src="../../../../static/mainapp/js/jquery.menu-aim.js"></script>
+<script src="../../../../static/mainapp/js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html>
