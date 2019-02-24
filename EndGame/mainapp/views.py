@@ -23,3 +23,8 @@ def dashboard(request):
     except Exception as ae:
         ctx= {'ae':ae}
         return render(request,'mainapp/error.html',ctx)
+
+def myCustomers(request):
+    allCustomers={}
+
+    return render(request, 'mainapp/index.html' ,allCustomers)
