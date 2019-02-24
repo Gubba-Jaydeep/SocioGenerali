@@ -7,10 +7,12 @@ class CustomerDatabase:
         self.client = pymongo.MongoClient("mongodb://jd254:pass123@cluster0-shard-00-00-yftzb.mongodb.net:27017,cluster0-shard-00-01-yftzb.mongodb.net:27017,cluster0-shard-00-02-yftzb.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true")
         self.mydb = self.client["customer"]
 
-    def getData(self,filter={}):
+    def getData(self):
         mycol = self.mydb["data"]
-        for x in mycol.find(filter,{"password":0}):
-            yield x
+        res = []
+        for x in mycol.find({},{"_id": 0, "name": 1, "email": 1, "phoneNumber": 1, "policyNumber": 1, "maturity date": 1}):
+            res.append(x)
+        return res
 
 
     '''def insertData(self,name,phoneNumber,email,dateOfBirth,gender,password,location=None,policyNumber=None,cliendID=None):
