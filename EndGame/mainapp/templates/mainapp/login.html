@@ -1,101 +1,33 @@
-
 <!doctype html>
-{% load staticfiles %}
 <html lang="en" class="no-js">
+{% load staticfiles %}
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-	<link rel="icon" type="image/png" href="../../static/mainapp/images/favicon.ico"/>
+
+	<link rel="icon" type="image/png" href="{% static 'mainapp/login form/favicon.ico' %}"/>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="{% static 'mainapp/Login css/util.css' %}">
-		<link rel="stylesheet" type="text/css" href="{% static 'mainapp/Login css/main.css' %}">
 
-<link rel="stylesheet" type="text/css" href="{% static 'mainapp/css/reset.css' %}"><!-- reset css-->
-<link rel="stylesheet" type="text/css" href="{% static 'mainapp/css/style.css' %}">    <!-- Resource style -->
-	<script src="mainapp/js/modernizr.js"></script> <!-- Modernizr -->
+	<link rel="stylesheet" type="text/css" href="{% static 'mainapp/login form/Login css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'mainapp/login form/Login css/main.css' %}">
   	
-	<title>Responsive Sidebar Navigation | CodyHouse</title>
+	<title>Login | FUTURE GENERALI</title>
 </head>
 <body>
-	<header class="cd-main-header">
-		<a href="#0" class="cd-logo"><i class="fa fa-facebook"></i></a>
-		
-		<div class="cd-search is-hidden">
-			<form action="#0">
-				<input type="search" placeholder="Search...">
-			</form>
-		</div> <!-- cd-search -->
-
-		<a href="#0" class="cd-nav-trigger"><span></span></a>
-
-		<nav class="cd-nav">
-			<ul class="cd-top-nav">
-				<li><a href="#0">Support</a></li>
-				<li class="has-children account">
-					<a href="#0">
-						<i class="fa fa-facebook"></i>
-						Account
-					</a>
-
-					<ul>
-
-						<li><a href="#0">My Account</a></li>
-						<li><a href="#0">Edit Account</a></li>
-						<li><a href="login.html">Logout</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-	</header> <!-- .cd-main-header -->
-
-	<main class="cd-main-content">
-		<nav class="cd-side-nav">
-			<ul>
-				<li class="cd-label">Main</li>
-				<li class="has-children overview"><a href="#0">Home</a></li>
-				<li class="has-children overview"><a href="#0">Customers</a></li>
-				<li class="has-children overview"><a href="#0">Contact Customer</a></li>
-
-				<li class="has-children notifications active">
-					<a href="#0">Notifications<span class="count">3</span></a>
-				</li>
-				
-			</ul>
-
-			<ul>
-				<li class="cd-label">Secondary</li>
-				<li class="has-children comments">
-					<a href="#0">Comments</a>
-					<ul>
-						<li><a href="#0">All Comments</a></li>
-						<li><a href="#0">Edit Comment</a></li>
-						<li><a href="#0">Delete Comment</a></li>
-					</ul>
-				</li>
-
-				<li class="has-children users">
-					<a href="#0">FAQs</a>
-				</li>
-			</ul>
-
-			<ul>
-				<li class="cd-label">Action</li>
-				<li class="action-btn"><a href="../login form/login.html" target="_self">Login</a></li>
-			</ul>
-		</nav>
-
-		<div class="content-wrapper" style="padding: 0px">
-		<div class="container-login100" style="background-image: url('../../static/mainapp/images/bg.jpg');">
+	<div class="content-wrapper" style="padding: 0px">
+		<div class="container-login100" style="background-image: url('../../static/mainapp/login form/bg.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form" method="post" action="{% url 'mainapp:dashboard' %}">
-				{% csrf_token %}
+				<form class="login100-form validate-form" method="get" action="{% url 'mainapp:dashboard' %}">
+					{% csrf_token %}
 					<span class="login100-form-title p-b-49">
-						Login
+						LOGIN
 					</span>
-					<div class="label-input100" style="border-radius:2px; margin-bottom:32px;padding-left: 0px">
+					<div style="border-radius:2px; margin-bottom:32px;padding-left: 0px">
 						<select name="selLoginWith" id="selLoginWith" class="selectField" style="padding: 18px">
 							<option selected="selected" value="UID">User Name</option>
 							<option value="EID">Registered Email Address</option>
@@ -134,9 +66,6 @@
 			</div>
 		</div>
 	</div>
-		</div> <!-- .content-wrapper -->
-	</main> <!-- .cd-main-content -->
-<script src="../../static/mainapp/js/jquery.menu-aim.js"></script>
-<script src="../../static/mainapp/js/main.js"></script> <!-- Resource jQuery -->
+
 </body>
 </html>

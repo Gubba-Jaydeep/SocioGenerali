@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search Customer | FUTURE GENERALI</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'mainapp/searchdetails/searchdetails.css' %}">
+
+  <link href="{% static 'mainapp/assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'mainapp/assets/css/paper-dashboard.css?v=2.0.0' %}" rel="stylesheet" />
+  <link href="{% static 'mainapp/assets/demo/demo.css' %}" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+</head>
+<body>
+    <div class="wrapper ">
+    <div class="sidebar" data-color="black" data-active-color="danger">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+      <div class="logo">
+        <a href="https://general.futuregenerali.in/" class="simple-text logo-mini">
+          <div class="logo-image-small">
+            <img src="../../static/mainapp/assets/img/logo.png">
+          </div>
+        </a>
+        <a href="https://general.futuregenerali.in/" class="simple-text logo-normal" style="font-size:16px">
+          FUTURE GENERALI
+          <!-- <div class="logo-image-big">
+            <img src="../assets/img/logo-big.png">
+          </div> -->
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li>
+            <a href="./home.html">
+              <i class="fa fa-home"></i>
+              <p>Home</p>
+            </a>
+          </li>
+          <li>
+            <a href="../../static/mainapp/customers/customers.html">
+              <i class="fa fa-address-book-o"></i>
+              <p>Customers</p>
+            </a>
+        </li>
+          <li class="active-pro">
+            <a href="login.html">
+              <i class="fa fa-at"></i>
+              <p>Logout</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="customers.html" style="padding-top: 15px">Search Customer</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navigation">
+            <form>
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Search...">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+						<i class="fa fa-search"></i>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link btn-rotate" href="#pablo">
+                  <i class="fa fa-user-circle"></i>
+                  <p>
+                    <span class="d-lg-none d-md-block">Account</span>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <!-- <div class="panel-header panel-header-sm">
+  
+  
+</div> -->
+      <div class="content" >
+        <div class="row" style="margin-top: -20px">
+          <div class="col-md-12">
+        <div style="display: block;margin-left: auto;margin-right: auto;width: 20%;">
+            <img src="../../static/mainapp/searchdetails/user.png" alt="">
+            <h4 style="margin-top:14px">Name of Customer</h4>
+        </div>
+    <div class="container" style="padding-top: 10px">
+        <div class="row">
+            <div class="col-md-4 col-sm-5">
+                <div class="pricingTable">
+                    <div class="pricingTable-header">
+                        <h3 class="title">Facebook</h3>
+                        <i class="fa fa-facebook" style="margin-top:22px;font-size:20px;"></i>
+                    </div>
+                    <ul class="pricing-content">
+                        <li><i class="fa fa-check"></i> 50GB Disk Space</li>
+                        <li><i class="fa fa-times"></i> 50 Email Accounts</li>
+                        <li><i class="fa fa-check"></i> 50GB Bandwidth</li>
+                        <li><i class="fa fa-times"></i> 10 Subdomains</li>
+                        <li><i class="fa fa-check"></i> 15 Domains</li>
+                    </ul>
+                    <a href="#" class="pricingTable-signup">Subscribe Now</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-5">
+                <div class="pricingTable blue">
+                    <div class="pricingTable-header">
+                        <h3 class="title">Twitter</h3>
+                        <i class="fa fa-twitter" style="margin-top:22px;font-size:20px;"></i>
+                    </div>
+                    <ul class="pricing-content">
+                        <li><i class="fa fa-check"></i> 60GB Disk Space</li>
+                        <li><i class="fa fa-check"></i> 60 Email Accounts</li>
+                        <li><i class="fa fa-check"></i> 60GB Bandwidth</li>
+                        <li><i class="fa fa-times"></i> 15 Subdomains</li>
+                        <li><i class="fa fa-check"></i> 20 Domains</li>
+                    </ul>
+                    <a href="#" class="pricingTable-signup">Subscribe Now</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-5">
+                <div class="pricingTable pink">
+                    <div class="pricingTable-header">
+                        <h3 class="title">Others</h3>
+                        <i class="fa fa-search" style="margin-top:22px;font-size:20px;"></i>
+                    </div>
+                    <ul class="pricing-content">
+                        <li><i class="fa fa-check"></i> 60GB Disk Space</li>
+                        <li><i class="fa fa-check"></i> 60 Email Accounts</li>
+                        <li><i class="fa fa-check"></i> 60GB Bandwidth</li>
+                        <li><i class="fa fa-times"></i> 15 Subdomains</li>
+                        <li><i class="fa fa-check"></i> 20 Domains</li>
+                    </ul>
+                    <a href="#" class="pricingTable-signup">Subscribe Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="../../static/mainapp/assets/js/core/jquery.min.js"></script>
+  <script src="../../static/mainapp/assets/js/core/popper.min.js"></script>
+  <script src="../../static/mainapp/assets/js/core/bootstrap.min.js"></script>
+  <script src="../../static/mainapp/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="../../static/mainapp/assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+  <script src="../../static/mainapp/assets/demo/demo.js"></script>
+</body>
+</html>

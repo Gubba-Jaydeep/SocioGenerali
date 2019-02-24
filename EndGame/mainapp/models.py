@@ -61,7 +61,6 @@ class AdvisorDatabase:
         res={}
         for x in mycol.find({},{"email":1,"password":1}):
             res[x["email"]]=x["password"]
-
         return res
 
 
