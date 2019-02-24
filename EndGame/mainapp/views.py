@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from django.template import loader
 from .models import AdvisorDatabase, CustomerDatabase
-from django.http import HttpResponse
-
 
 # Create your views here.
 
@@ -30,5 +28,6 @@ def myCustomers(request):
     return render(request, 'mainapp/customers.html' ,{'customers' : customers})
 
 def customerDetail(request, pk):
-
-    return render(request,'mainapp/idex.html',{})
+    db = CustomerDatabase()
+    customer = db.getDataFromPk(int(pk))
+    return render(request,'mainapp/showdetails.html',{'customer' : customer})

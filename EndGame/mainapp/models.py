@@ -17,7 +17,7 @@ class CustomerDatabase:
     def getDataFromPk(self,pk):
         mycol=self.mydb["data"]
         x=mycol.find_one({"pk":pk},{"_id": 0,"pk":1 , "first_name": 1, "email": 1, "phoneNumber": 1, "policyNumber": 1, "maturityDate": 1})
-        if x==None:
+        if x == None:
             return False
         else:
             return x
