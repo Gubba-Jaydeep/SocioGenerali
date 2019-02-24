@@ -26,5 +26,8 @@ def dashboard(request):
 
 def myCustomers(request):
     db = CustomerDatabase()
-    customers= db.getData()
+    customers= db.getData()[:10]
     return render(request, 'mainapp/customers.html' ,{'customers' : customers})
+
+def customerDetail(request):
+    return render(request,'mainapp/idex.html',{})

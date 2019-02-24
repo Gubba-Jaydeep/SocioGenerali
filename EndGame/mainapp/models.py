@@ -10,7 +10,7 @@ class CustomerDatabase:
     def getData(self):
         mycol = self.mydb["data"]
         res = []
-        for x in mycol.find({},{"_id": 0, "name": 1, "email": 1, "phoneNumber": 1, "policyNumber": 1, "maturityDate": 1}):
+        for x in mycol.find({},{"_id": 0,"pk":1 , "first_name": 1, "email": 1, "phoneNumber": 1, "policyNumber": 1, "maturityDate": 1}):
             res.append(x)
         return res
 

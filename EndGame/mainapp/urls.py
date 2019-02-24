@@ -5,5 +5,8 @@ app_name = 'mainapp'
 urlpatterns = [
     path("", views.index, name='index'),
     path("dashboard",views.dashboard, name="dashboard"),
-    path("mycustomers",views.myCustomers, name="myCustomers")
+    path("mycustomers",views.myCustomers, name="myCustomers"),
+    #id
+    re_path(r'^(?P<pk>[0-9]+)/$', views.customerDetail, name="customerDetail"),
+
 ]
