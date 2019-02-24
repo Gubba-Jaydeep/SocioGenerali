@@ -69,7 +69,7 @@ class AdvisorDatabase:
     def getCompleteInfo(self,email):
         mycol=self.mydb["data"]
         res=mycol.find_one({"email":email},{"_id":0,"password":0})
-        if res==None:
+        if res is None:
             return False
         return res
 

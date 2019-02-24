@@ -137,13 +137,13 @@
 						{% if customers %}
 						{% for customer in customers %}
 						<tr>
-							<td>1</td>
-							<td>{{ customer.email }}</td>
+							<td>{{ customer.pk }}</td>
+							<td>{{ customer.first_name }}</td>
 							<td>{{ customer.maturityDate }}</td>
 							<td>Premium</td>
 							<td></td>
 							<td>
-								<button class="btn btn-default" onclick="showfunc()">Show Details</button>
+								<button class="btn btn-default" href="{% url 'mainapp:customerDetail' customer.pk %}">Show Details</button>
 							</td>
 						</tr>
 						{% endfor %}
