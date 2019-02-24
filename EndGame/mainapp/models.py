@@ -75,7 +75,6 @@ class AdvisorDatabase:
 
 
 
-
     '''def insertData(self, name, phoneNumber, email, dateOfBirth,type, gender, password, location=None):
         mycol = self.mydb["data"]
         if mycol.find_one({"email": email}) == None:
