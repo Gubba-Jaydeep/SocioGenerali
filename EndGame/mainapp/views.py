@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.template import loader
-from .models import AdvisorDatabase
+from .models import AdvisorDatabase, CustomerDatabase
 from django.http import HttpResponse
 
 
@@ -25,6 +25,6 @@ def dashboard(request):
         return render(request,'mainapp/error.html',ctx)
 
 def myCustomers(request):
-    allCustomers={}
-
-    return render(request, 'mainapp/index.html' ,allCustomers)
+    db = CustomerDatabase()
+    customers= db.getData()
+    return render(request, 'mainapp/customers.html' ,{'customers' : customers})
