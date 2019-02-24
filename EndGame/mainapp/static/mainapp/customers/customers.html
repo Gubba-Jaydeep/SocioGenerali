@@ -680,15 +680,16 @@
 	
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 	<script src="{% static 'mainapp/assets/js/core/jquery.min.js' %}"></script>
   <script src="{% static 'mainapp/assets/js/core/popper.min.js' %}"></script>
   <script src="{% static 'mainapp/assets/js/core/bootstrap.min.js' %}"></script>
   <script src="{% static 'mainapp/assets/js/plugins/perfect-scrollbar.jquery.min.js'%}"></script>
-  <script src="{% static 'mainapp/assets/js/paper-dashboard.min.js?v=2.0.0' %}" type="text/javascript"></script>
+  <script src="{% static 'mainapp/assets/js/paper-dashboard.js' %}" ></script>
   <script src="{% static 'mainapp/assets/demo/demo.js' %}"></script>
-</body>
-<script type="text/javascript" src="assets/js/bootstrap.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap-table.js"></script>
+
+<script  src="{% static 'mainapp/customers/assets/js/bootstrap.js' %}"></script>
+<script src="{% static 'mainapp/customers/assets/js/bootstrap-table.js' %}"></script>
         
     <script type="text/javascript">
         var $table = $('#fresh-table'),
@@ -759,4 +760,5 @@ $('[data-toggle=offcanvas-in]').click(function() {
     $('span.collapse').addClass('in');
 });
 	</script>
+	</body>
 </html>
