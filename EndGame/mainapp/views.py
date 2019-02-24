@@ -29,5 +29,6 @@ def myCustomers(request):
     customers= db.getData()[:10]
     return render(request, 'mainapp/customers.html' ,{'customers' : customers})
 
-def customerDetail(request):
+def customerDetail(request, pk):
+
     return render(request,'mainapp/idex.html',{})
