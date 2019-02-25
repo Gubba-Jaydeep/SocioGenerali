@@ -36,17 +36,17 @@ def dashboard(request):
         return render(request, 'mainapp/login.html', {})
 
 def logout(request):
-    request.COOKIES.clear()
-
-
-
-
-
+    response = render(request,'mainapp/login.html',{})
+    response.set_cookie("loggedIn",False)
+    return response
 
 def myCustomers(request):
-    db = CustomerDatabase()
-    customers= db.getData()[:10]
-    return render(request, 'mainapp/customers.html' ,{'customers' : customers})
+    if request.COOKIES.get("loggedIn"):
+        db = CustomerDatabase()
+        customers= db.getData()[:10]
+        return render(request, 'mainapp/customers.html' ,{'customers' : customers})
+    else:
+        return render(request, 'mainapp/login.html', {})
 
 def customerDetail(request, pk):
     db = CustomerDatabase()
