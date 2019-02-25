@@ -105,7 +105,7 @@
             </ul>
           </div>
         </div>
-      </nav>
+      </nav>3
       <!-- End Navbar -->
       <!-- <div class="panel-header panel-header-sm">
   
@@ -116,7 +116,7 @@
           <div class="col-md-12">
         <div style="display: block;margin-left: auto;margin-right: auto;width: 20%;">
             <img src="{% static 'mainapp/searchdetails/user.png' %}" alt="">
-            <h4 style="margin-top:14px">Name of Customer</h4>
+            <h4 style="margin-top:14px"><span id="name">z</span></h4>
         </div>
     <div class="container" style="padding-top: 10px">
         <div class="row">
@@ -126,14 +126,8 @@
                         <h3 class="title">Facebook</h3>
                         <i class="fa fa-facebook" style="margin-top:22px;font-size:20px;"></i>
                     </div>
-                    <ul class="pricing-content">
-                        <li><i class="fa fa-check"></i> 50GB Disk Space</li>
-                        <li><i class="fa fa-times"></i> 50 Email Accounts</li>
-                        <li><i class="fa fa-check"></i> 50GB Bandwidth</li>
-                        <li><i class="fa fa-times"></i> 10 Subdomains</li>
-                        <li><i class="fa fa-check"></i> 15 Domains</li>
-                    </ul>
-                    <a href="#" class="pricingTable-signup">Subscribe Now</a>
+                     <p id="msgfb"></p>
+
                 </div>
             </div>
             <div class="col-md-4 col-sm-5">
@@ -142,14 +136,8 @@
                         <h3 class="title">Twitter</h3>
                         <i class="fa fa-twitter" style="margin-top:22px;font-size:20px;"></i>
                     </div>
-                    <ul class="pricing-content">
-                        <li><i class="fa fa-check"></i> 60GB Disk Space</li>
-                        <li><i class="fa fa-check"></i> 60 Email Accounts</li>
-                        <li><i class="fa fa-check"></i> 60GB Bandwidth</li>
-                        <li><i class="fa fa-times"></i> 15 Subdomains</li>
-                        <li><i class="fa fa-check"></i> 20 Domains</li>
-                    </ul>
-                    <a href="#" class="pricingTable-signup">Subscribe Now</a>
+                     <p id="msgtw"></p>
+
                 </div>
             </div>
             <div class="col-md-4 col-sm-5">
@@ -158,14 +146,8 @@
                         <h3 class="title">Others</h3>
                         <i class="fa fa-search" style="margin-top:22px;font-size:20px;"></i>
                     </div>
-                    <ul class="pricing-content">
-                        <li><i class="fa fa-check"></i> 60GB Disk Space</li>
-                        <li><i class="fa fa-check"></i> 60 Email Accounts</li>
-                        <li><i class="fa fa-check"></i> 60GB Bandwidth</li>
-                        <li><i class="fa fa-times"></i> 15 Subdomains</li>
-                        <li><i class="fa fa-check"></i> 20 Domains</li>
-                    </ul>
-                    <a href="#" class="pricingTable-signup">Subscribe Now</a>
+                      <p id="msgot"></p>
+
                 </div>
             </div>
         </div>
@@ -183,5 +165,6 @@
   <script src="{% static 'mainapp/assets/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
   <script src="{% static 'mainapp/assets/js/paper-dashboard.js' %}" ></script>
   <script src="{% static 'mainapp/assets/demo/demo.js' %}"></script>
+ <script src="{% static 'mainapp/show details/show-details.js' %}"></script>
 </body>
 </html>
