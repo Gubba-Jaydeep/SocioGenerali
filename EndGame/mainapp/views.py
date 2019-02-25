@@ -7,22 +7,25 @@ from .models import AdvisorDatabase, CustomerDatabase
 def index(request):
     return render(request, 'mainapp/login.html', {})
 
-def dashboard(request):
-    #retrieving data from form and validation and redirection to dashboard page
-    with open("/Users/jaydeep/Documents/html/mklog.txt","wt") as f:
-        f.write(str(request))
-    db =  AdvisorDatabase()
+def login(request):
+    db = AdvisorDatabase()
     dict_of_officials = db.getData()
     uname = request.GET['username']
     psw = request.GET['pass']
     try:
-        if dict_of_officials[uname]==psw:
-            return render(request,'mainapp/home.html',{'uname' : uname})
+        if dict_of_officials[uname] == psw:
+            return render(request, 'mainapp/home.html', {'uname': uname})
         else:
-            return render(request,'mainapp/index.html',{})
+            return render(request, 'mainapp/index.html', {})
     except Exception as ae:
-        ctx= {'ae':ae}
-        return render(request,'mainapp/error.html',ctx)
+        ctx = {'ae': ae}
+        return render(request, 'mainapp/error.html', ctx)
+
+def dashboard(request):
+    #retrieving data from form and validation and redirection to dashboard page
+    with open("./mklog.txt","wt") as f:
+        f.write(str(request))
+
 
 def myCustomers(request):
     db = CustomerDatabase()
