@@ -131,9 +131,9 @@
 								<i class="ace-icon fa fa-envelope-o bigger-110"></i>
 								<span class="bigger-110">Notify via E-mail</span>
                             </a>
-                            <a href="#" class="btn btn-sm btn-block btn-primary" style="width: 51%;position: absolute;top: 82%;left: 25%; background:green">
+                            <a href="{% url 'mainapp:searchDetails' %}" class="btn btn-sm btn-block btn-primary" style="width: 51%;position: absolute;top: 82%;left: 25%; background:green">
                                     <i class="ace-icon fa fa-envelope-o bigger-110"></i>
-                                    <span class="bigger-110">Search in Social media</span>
+                                    <span class="bigger-110" >Search in Social media</span>
                                 </a>
 						</div><!-- /.col -->
 
@@ -148,7 +148,7 @@
 									<div class="profile-info-name"> Username </div>
 
 									<div class="profile-info-value">
-										<span>{{ customer.first_name }}</span>
+										<span id="uname">{{ customer.first_name }}</span>
 									</div>
 								</div>
 
@@ -241,5 +241,6 @@
   <script src="{% static 'mainapp/assets/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
   <script src="{% static 'mainapp/assets/js/paper-dashboard.min.js' %}" type="text/javascript"></script>
   <script src="{% static 'mainapp/assets/demo/demo.js' %}"></script>
+      <script src="{% static 'mainapp/searchdetails/search.js' %}"></script>
 </body>
 </html>

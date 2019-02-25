@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{% static 'mainapp/searchdetails/searchdetails.css' %}">
 
   <link href="{% static 'mainapp/assets/css/bootstrap.min.css' %}" rel="stylesheet" />
-  <link href="{% static 'mainapp/assets/css/paper-dashboard.css?v=2.0.0' %}" rel="stylesheet" />
+  <link href="{% static 'mainapp/assets/css/paper-dashboard.css' %}" rel="stylesheet" />
   <link href="{% static 'mainapp/assets/demo/demo.css' %}" rel="stylesheet" />
 
 
@@ -30,7 +30,7 @@
       <div class="logo">
         <a href="https://general.futuregenerali.in/" class="simple-text logo-mini">
           <div class="logo-image-small">
-            <img src="../../static/mainapp/assets/img/logo.png">
+            <img src="{% static 'mainapp/assets/img/logo.png' %}">
           </div>
         </a>
         <a href="https://general.futuregenerali.in/" class="simple-text logo-normal" style="font-size:16px">
@@ -115,7 +115,7 @@
         <div class="row" style="margin-top: -20px">
           <div class="col-md-12">
         <div style="display: block;margin-left: auto;margin-right: auto;width: 20%;">
-            <img src="../../static/mainapp/searchdetails/user.png" alt="">
+            <img src="{% static 'mainapp/searchdetails/user.png' %}" alt="">
             <h4 style="margin-top:14px">Name of Customer</h4>
         </div>
     <div class="container" style="padding-top: 10px">
@@ -177,11 +177,11 @@
 </div>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="../../static/mainapp/assets/js/core/jquery.min.js"></script>
-  <script src="../../static/mainapp/assets/js/core/popper.min.js"></script>
-  <script src="../../static/mainapp/assets/js/core/bootstrap.min.js"></script>
-  <script src="../../static/mainapp/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <script src="../../static/mainapp/assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
-  <script src="../../static/mainapp/assets/demo/demo.js"></script>
+	<script src="{% static 'mainapp/assets/js/core/jquery.min.js' %}"></script>
+  <script src="{% static 'mainapp/assets/js/core/popper.min.js' %}"></script>
+  <script src="{% static 'mainapp/assets/js/core/bootstrap.min.js' %}"></script>
+  <script src="{% static 'mainapp/assets/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
+  <script src="{% static 'mainapp/assets/js/paper-dashboard.js' %}" ></script>
+  <script src="{% static 'mainapp/assets/demo/demo.js' %}"></script>
 </body>
 </html>

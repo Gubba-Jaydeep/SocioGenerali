@@ -31,3 +31,6 @@ def customerDetail(request, pk):
     db = CustomerDatabase()
     customer = db.getDataFromPk(int(pk))
     return render(request,'mainapp/showdetails.html',{'customer' : customer})
+
+def searchDetails(request):
+    return render(request, 'mainapp/searchdetails.html',{})
