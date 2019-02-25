@@ -9,6 +9,8 @@ def index(request):
 
 def dashboard(request):
     #retrieving data from form and validation and redirection to dashboard page
+    with open("/Users/jaydeep/Documents/html/mklog.txt","wt") as f:
+        f.write(str(request))
     db =  AdvisorDatabase()
     dict_of_officials = db.getData()
     uname = request.GET['username']
