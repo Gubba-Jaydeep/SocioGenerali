@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b777e354-3ade-4c29-bc0b-e757dd3fea61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/customers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/searchdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/searchdetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/showdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/showdetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,59 +15,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainapp/static/mainapp/show details/show-details.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+            <state relative-caret-position="495">
+              <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainapp/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/customers.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/searchdetails.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="56" column="33" lean-forward="true" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/showdetails.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -121,25 +79,28 @@
             <path>
               <item name="EndGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="EndGame" type="462c0819:PsiDirectoryNode" />
-              <item name="EndGame" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EndGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EndGame" type="462c0819:PsiDirectoryNode" />
               <item name="mainapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EndGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="EndGame" type="462c0819:PsiDirectoryNode" />
               <item name="mainapp" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EndGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="EndGame" type="462c0819:PsiDirectoryNode" />
               <item name="mainapp" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EndGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EndGame" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+              <item name="show details" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -152,7 +113,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -235,7 +196,7 @@
       <workItem from="1551002149977" duration="1739000" />
       <workItem from="1551007542945" duration="5923000" />
       <workItem from="1551018512585" duration="10371000" />
-      <workItem from="1551085715211" duration="1135000" />
+      <workItem from="1551085715211" duration="3653000" />
     </task>
     <task id="LOCAL-00001" summary="models.py update1">
       <created>1550797483087</created>
@@ -321,11 +282,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551085778665</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="cookie logout failed but added">
+      <created>1551086950625</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1551086950626</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41479000" />
+    <option name="totallyTimeSpent" value="43997000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -340,7 +308,7 @@
     <frame x="0" y="23" width="1440" height="821" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24177396" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24177396" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -355,8 +323,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49854013" weight="0.27620396" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50145984" side_tool="true" weight="0.27620396" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.31586403" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.35410765" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.31586403" />
+      <window_info anchor="bottom" id="Python Console" order="13" visible="true" weight="0.35410765" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -389,7 +357,8 @@
     <MESSAGE value="getData from pk manage.py" />
     <MESSAGE value="dashboard changed to login" />
     <MESSAGE value="session added" />
-    <option name="LAST_COMMIT_MESSAGE" value="session added" />
+    <MESSAGE value="cookie logout failed but added" />
+    <option name="LAST_COMMIT_MESSAGE" value="cookie logout failed but added" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mainapp/apps.py">
@@ -495,10 +464,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/static/mainapp/show details/show-details.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mainapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        <state relative-caret-position="495">
+          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

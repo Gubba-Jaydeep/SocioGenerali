@@ -30,14 +30,14 @@ def dashboard(request):
 
     '''with open("./mklog.txt","wt") as f:
         f.write(str(request))'''
-    if request.COOKIES.get("loggedIn"):
+    if request.COOKIES.get("loggedIn",None):
         return render(request, 'mainapp/home.html', {'uname': request.COOKIES.get("userName")})
     else:
         return render(request, 'mainapp/login.html', {})
 
 def logout(request):
     response = render(request,'mainapp/login.html',{})
-    response.set_cookie("loggedIn",False)
+    response.delete_cookie("loggedIn")
     return response
 
 def myCustomers(request):
