@@ -19,9 +19,12 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  
+
 </head>
 <body>
+ <div id = "myDiv" style="display:none;text-align:center;">
+     <img id = "myImage" height="800px" style="display: block;
+padding-left:400px;" src = "{% static 'mainapp/searchdetails/loader.gif' %}"></div><br>
     <div class="wrapper ">
     <div class="sidebar" data-color="black" data-active-color="danger">
       <!--
@@ -65,58 +68,33 @@
     </div>
     <div class="main-panel">
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
-        <div class="container-fluid">
-          <div class="navbar-wrapper">
-            <div class="navbar-toggle">
-              <button type="button" class="navbar-toggler">
-                <span class="navbar-toggler-bar bar1"></span>
-                <span class="navbar-toggler-bar bar2"></span>
-                <span class="navbar-toggler-bar bar3"></span>
-              </button>
-            </div>
-            <a class="navbar-brand" href="customers.html" style="padding-top: 15px">Search Customer</a>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navigation">
-            <form>
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <div class="input-group-append">
-                  <div class="input-group-text">
-						<i class="fa fa-search"></i>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link btn-rotate" href="#pablo">
-                  <i class="fa fa-user-circle"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Account</span>
-                  </p>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>3
-      <!-- End Navbar -->
+
       <!-- <div class="panel-header panel-header-sm">
   
   
 </div> -->
+
       <div class="content" >
+          <div>
+        <script>
+            (function() {
+              var cx = '009198650927089725781:dldxkbadqr8';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:search></gcse:search>
+    </div>
+
         <div class="row" style="margin-top: -20px">
           <div class="col-md-12">
         <div style="display: block;margin-left: auto;margin-right: auto;width: 20%;">
             <img src="{% static 'mainapp/searchdetails/user.png' %}" alt="">
-            <h4 style="margin-top:14px"><span id="name">z</span></h4>
+            <h4 style="margin-top:14px"><span id="name"></span></h4>
         </div>
     <div class="container" style="padding-top: 10px">
         <div class="row">

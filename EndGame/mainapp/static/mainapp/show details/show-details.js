@@ -1,3 +1,19 @@
+ $("").hide();
+  (function(){
+    var myDiv = document.getElementById("myDiv"),
+
+      show = function(){
+        myDiv.style.display = "block";
+        setTimeout(hide, 8000); // 5 seconds
+      },
+
+      hide = function(){
+        myDiv.style.display = "none";
+      };
+
+    show();
+  })();
+
   $(document).ready(function(){
 
                 var name1= localStorage.getItem("name");
@@ -6,7 +22,7 @@
                  document.getElementById("name").innerHTML=name;
             //var name=$(".name").val();
             //var fail='https://api.social-searcher.com/v2/search?q=%22Monthly%20fails%22&type=video&network=youtube,dailymotion&limit=100&key=f3f7f89be89f4d96950fee9e38aa50b1';
-            var url='https://api.social-searcher.com/v2/search?q='+name+'&key=771bf09f285365e0c4454a832fb55618';
+            var url='https://api.social-searcher.com/v2/search?q='+name+'&key=f3f7f89be89f4d96950fee9e38aa50b1';
 
 
                 $.getJSON(url,function(data){
