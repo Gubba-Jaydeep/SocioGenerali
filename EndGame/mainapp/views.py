@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.template import loader
 from .models import AdvisorDatabase, CustomerDatabase
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
@@ -62,3 +62,6 @@ def searchDetails(request):
         return render(request, 'mainapp/searchdetails.html',{})
     else:
         return render(request, 'mainapp/login.html', {})
+
+def sendEmail(request):
+    return HttpResponseRedirect("https://mail.google.com/mail/?view=cm&fs=1&to=neotrix1111@gmail.com&su=SUBJECT&body=BODY&bcc=someone.else@example.com")

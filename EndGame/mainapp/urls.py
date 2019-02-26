@@ -9,6 +9,7 @@ urlpatterns = [
     path("mycustomers",views.myCustomers, name="myCustomers"),
     path("searchDetails",views.searchDetails, name="searchDetails"),
     path("logout",views.logout,name="logout"),
+    path("sendEmail",views.sendEmail,name="sendEmail"),
     #mycustomers/pk
     re_path(r'^(?P<pk>[0-9]+)/$', views.customerDetail, name="customerDetail"),
 

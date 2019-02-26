@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b777e354-3ade-4c29-bc0b-e757dd3fea61" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/mainapp/static/mainapp/searchdetails/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/static/mainapp/searchdetails/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/showdetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/showdetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
     </list>
@@ -29,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/mainapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="343">
-              <caret line="63" column="56" selection-start-line="63" selection-start-column="56" selection-end-line="63" selection-end-column="56" />
+              <caret line="66" column="96" selection-start-line="66" selection-start-column="96" selection-end-line="66" selection-end-column="96" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -49,8 +51,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/showdetails.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+            <state relative-caret-position="121">
+              <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+              <folding>
+                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainapp/static/mainapp/searchdetails/search.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -58,13 +72,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" column="79" lean-forward="true" selection-start-line="12" selection-start-column="79" selection-end-line="12" selection-end-column="79" />
+            <state relative-caret-position="150">
+              <caret line="11" column="55" lean-forward="true" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>harsha</find>
+      <find>dashboard-free</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -80,8 +100,9 @@
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/customers.html" />
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/home.html" />
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/searchdetails.html" />
-        <option value="$PROJECT_DIR$/mainapp/templates/mainapp/showdetails.html" />
         <option value="$PROJECT_DIR$/mainapp/urls.py" />
+        <option value="$PROJECT_DIR$/mainapp/templates/mainapp/showdetails.html" />
+        <option value="$PROJECT_DIR$/mainapp/static/mainapp/searchdetails/search.js" />
         <option value="$PROJECT_DIR$/mainapp/views.py" />
       </list>
     </option>
@@ -128,7 +149,7 @@
               <item name="mainapp" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="mainapp" type="462c0819:PsiDirectoryNode" />
-              <item name="show details" type="462c0819:PsiDirectoryNode" />
+              <item name="searchdetails" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EndGame" type="b2602c69:ProjectViewProjectNode" />
@@ -238,7 +259,7 @@
       <workItem from="1551007542945" duration="5923000" />
       <workItem from="1551018512585" duration="10371000" />
       <workItem from="1551085715211" duration="3702000" />
-      <workItem from="1551167945408" duration="2359000" />
+      <workItem from="1551167945408" duration="4343000" />
     </task>
     <task id="LOCAL-00001" summary="models.py update1">
       <created>1550797483087</created>
@@ -345,11 +366,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551169998249</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="cookie logout successs!!">
+      <created>1551171971844</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1551171971844</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46405000" />
+    <option name="totallyTimeSpent" value="48389000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -414,7 +442,8 @@
     <MESSAGE value="dashboard changed to login" />
     <MESSAGE value="session added" />
     <MESSAGE value="cookie logout failed but added" />
-    <option name="LAST_COMMIT_MESSAGE" value="cookie logout failed but added" />
+    <MESSAGE value="cookie logout successs!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="cookie logout successs!!" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mainapp/apps.py">
@@ -513,24 +542,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/showdetails.html">
+    <entry file="file://$PROJECT_DIR$/mainapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+        <state relative-caret-position="150">
+          <caret line="11" column="55" lean-forward="true" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/urls.py">
+    <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/showdetails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="79" lean-forward="true" selection-start-line="12" selection-start-column="79" selection-end-line="12" selection-end-column="79" />
+        <state relative-caret-position="121">
+          <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/static/mainapp/searchdetails/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mainapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
-          <caret line="63" column="56" selection-start-line="63" selection-start-column="56" selection-end-line="63" selection-end-column="56" />
+          <caret line="66" column="96" selection-start-line="66" selection-start-column="96" selection-end-line="66" selection-end-column="96" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
