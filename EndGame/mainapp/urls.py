@@ -8,7 +8,7 @@ urlpatterns = [
     path("login",views.login,name="login"),
     path("mycustomers",views.myCustomers, name="myCustomers"),
     path("searchDetails",views.searchDetails, name="searchDetails"),
-    path("",views.logout,name="logout"),
+    path("logout",views.logout,name="logout"),
     #mycustomers/pk
     re_path(r'^(?P<pk>[0-9]+)/$', views.customerDetail, name="customerDetail"),
 

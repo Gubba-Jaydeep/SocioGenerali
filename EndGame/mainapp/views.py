@@ -38,8 +38,7 @@ def dashboard(request):
 def logout(request):
     if request.COOKIES.get("loggedIn"):
         response = render(request,'mainapp/login.html',{})
-        response.set_cookie("loggedIn", False,max_age=1)
-        response.set_cookie("userName", "")
+        response.delete_cookie("userName")
         response.delete_cookie("loggedIn")
         return response
     else:
@@ -59,4 +58,7 @@ def customerDetail(request, pk):
     return render(request,'mainapp/showdetails.html',{'customer' : customer})
 
 def searchDetails(request):
-    return render(request, 'mainapp/searchdetails.html',{})
+    if request.COOKIES.get("loggedIn"):
+        return render(request, 'mainapp/searchdetails.html',{})
+    else:
+        return render(request, 'mainapp/login.html', {})
