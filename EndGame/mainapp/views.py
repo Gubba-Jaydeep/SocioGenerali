@@ -36,9 +36,14 @@ def dashboard(request):
         return render(request, 'mainapp/login.html', {})
 
 def logout(request):
-    response = render(request,'mainapp/login.html',{})
-    response.delete_cookie("loggedIn")
-    return response
+    if request.COOKIES.get("loggedIn"):
+        response = render(request,'mainapp/login.html',{})
+        response.set_cookie("loggedIn", False,max_age=1)
+        response.set_cookie("userName", "")
+        response.delete_cookie("loggedIn")
+        return response
+    else:
+        render(request, 'mainapp/error.html', {})
 
 def myCustomers(request):
     if request.COOKIES.get("loggedIn"):
