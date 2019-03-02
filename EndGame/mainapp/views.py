@@ -32,7 +32,7 @@ def dashboard(request):
         f.write(str(request))'''
     if request.COOKIES.get("loggedIn",None):
         db = AdvisorDatabase()
-        user = db.getDataFromUname()
+        user = db.getDataFromEmail()
         return render(request, 'mainapp/home.html', {'user': user})
     else:
         return render(request, 'mainapp/login.html', {})
