@@ -92,7 +92,7 @@ def grabPhoto(request):
     for x in range(index):
         if '/public/' in links[x]:
             img_obj=Image.open('ss'+str(x)+'.jpg')
-            crop_img=img_obj.crop((307, 333, 382, 408))
+            crop_img=img_obj.crop((211, 315, 295, 395))
             crop_img.save('ss'+str(x)+'.png')
         else:
             img_obj = Image.open('ss' + str(x) + '.jpg')
