@@ -27,9 +27,13 @@
 
                 $.getJSON(url,function(data){
                     var recordfb=[];
+                    var recordfb1=[];
                     var recordtw=[];
+                    var recordtw1=[];
+
                    // var yo=[1,2,3,4];
                     var recordothers=[];
+                    var recordothers1=[];
                     var fb=/facebook/i;
                     var tw=/twitter/i;
                     for(var j =0;j<data.posts.length;j++){
@@ -37,12 +41,12 @@
                         if(obj["url"].match(fb)) {
 
                             console.log(obj["url"]);
-                            recordfb.push("<a href='"+obj["url"]+"'  >"+ obj["url"] + "</a>" + "<br><b>Last Active::</b>" + obj["posted"] + "<br>" + "<br>");
+                            recordfb.push("<a href='"+obj["url"]+"'  >"+ obj["url"] + "</a>"+"<br><br>");
                         }
                         else if(obj["url"].match(tw))
-                        recordtw.push("<a href='"+obj["url"]+"'  >"+ obj["url"] + "</a>" + "<br><b>Last Active::</b>"+obj["posted"]+"<br>"+"<br>");
+                        recordtw.push("<a href='"+obj["url"]+"'  >"+ obj["url"] + "</a>"+"<br><br>");
                        else
-                       recordothers.push("<b>Web ::</b> "+"<a href='"+obj["url"]+"'  >"+ obj["url"] + "</a>" +"<br><b>Last Active::</b>"+obj["posted"]+"<br>"+"<br>");
+                       recordothers.push("<a href='"+obj["url"]+"'  >"+ obj["url"] + "</a>"+"<br><br>");
 
                         //console.log(obj["<b>Others ::</b> "+obj["url"]);
                         //771bf09f285365e0c4454a832fb55618
@@ -56,6 +60,7 @@
                     $('#msgot').html(recordothers);
                     //+" : "+obj["user"]["location"]
                     console.log(recordfb);
+                    document.getElementById("txtar").innerHTML=recordfb;
                     // localStorage.setItem('fbdata', JSON.stringify(recordfb));
                     // localStorage.setItem('twitterdata', JSON.stringify(recordtw));
                     // localStorage.setItem('otherdata', JSON.stringify(recordothers));
