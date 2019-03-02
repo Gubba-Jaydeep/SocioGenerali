@@ -91,6 +91,8 @@ class AdvisorDatabase:
             res[x["email"]]=x["password"]
         return res
 
+
+
     #returns a dict containing the details of the user whose email is passed as paramater
     def getCompleteInfo(self,email):
         mycol=self.mydb["data"]
@@ -98,7 +100,13 @@ class AdvisorDatabase:
         if res is None:
             return False
         return res
-
+    def getDataFromEmail(self,email):
+        mycol=self.mydb["data"]
+        x=mycol.find_one({"email":email},{"_id": 0})
+        if x == None:
+            return False
+        else:
+            return x
 
 
     '''def insertData(self, name, phoneNumber, email, dateOfBirth,type, gender, password, location=None):
