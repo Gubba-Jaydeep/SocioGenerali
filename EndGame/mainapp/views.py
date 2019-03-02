@@ -3,6 +3,7 @@ from django.template import loader
 from .models import AdvisorDatabase, CustomerDatabase
 from django.http import HttpResponseRedirect
 from selenium import webdriver
+from PIL import Image
 # Create your views here.
 
 def index(request):
@@ -88,6 +89,15 @@ def grabPhoto(request):
     driver.quit()
     #all photos are stored in mainapp level
     #harsha has to write code for comparing the photos
+    for x in range(index):
+        if '/public/' in links[x]:
+            img_obj=Image.open('ss'+str(x)+'.jpg')
+            crop_img=img_obj.crop((307, 333, 382, 408))
+            crop_img.save('ss'+str(x)+'.png')
+        else:
+            img_obj = Image.open('ss' + str(x) + '.jpg')
+            crop_img = img_obj.crop((101, 257, 265, 420))
+            crop_img.save('ss' + str(x) + '.png')
     return render(request,'mainapp/screenShotDone.html',{})
 
 
