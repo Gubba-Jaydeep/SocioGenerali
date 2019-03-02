@@ -135,7 +135,12 @@ padding-left:400px;" src = "{% static 'mainapp/searchdetails/loader.gif' %}"></d
         </div>
     </div>
 </div>
- <textarea rows="10" cols="50" name="photoLinks" id="txtar"></textarea>
+ <form method="get" action="{% url 'mainapp:grabPhoto' %}">
+     {% csrf_token %}
+      <textarea rows="10" cols="50" name="photoLinks" id="txtar"></textarea>
+
+<button type="submit">click</button>
+ </form>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="{% static 'mainapp/assets/js/core/jquery.min.js' %}"></script>

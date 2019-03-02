@@ -79,11 +79,15 @@ def sendEmail(request):
 def grabPhoto(request):
     links = request.GET['photoLinks']
     links = links.split(",")
-
+    index=0
     driver = webdriver.Chrome(executable_path='D:/chromedriver.exe')
-    driver.get(links[0])
-    ss=driver.save_screenshot('ss1.jpg')
+    for link in links:
+        driver.get(link)
+        ss = driver.save_screenshot('ss'+str(index)+'.jpg')
+        index+=1
     driver.quit()
+    #all photos are stored in mainapp level
+    #harsha has to write code for comparing the photos
     return render(request,'mainapp/screenShotDone.html',{})
 
 

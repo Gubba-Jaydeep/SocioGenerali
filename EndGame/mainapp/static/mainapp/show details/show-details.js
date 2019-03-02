@@ -22,7 +22,7 @@
                  document.getElementById("name").innerHTML=name;
             //var name=$(".name").val();
             //var fail='https://api.social-searcher.com/v2/search?q=%22Monthly%20fails%22&type=video&network=youtube,dailymotion&limit=100&key=f3f7f89be89f4d96950fee9e38aa50b1';
-            var url='https://api.social-searcher.com/v2/search?q='+name+'&key=62eca409b57b0137e88508d5f931271c';
+            var url='https://api.social-searcher.com/v2/search?q='+name+'&key=09a6312abd7970cb42378e0de709ab3a';
 
 
                 $.getJSON(url,function(data){
@@ -47,17 +47,17 @@
                                 var a = obj["url"].slice(32, obj["url"].length);
                                 a1 = a.split("//");
                                 recordfb1.push("<a href='" + a + "'  >" + a1[0] + "</a>" + "<br><br>");
-                                recordfb.push("<a href='" + obj["url"] + "'  >" + obj["url"] + "</a>" + "<br><br>");
+                                recordfb.push(obj["url"]);
                             }
                             else if (obj["url"].match(pp)) {
                                 var b = obj["url"].slice(32, obj["url"].length);
                                 recordfb1.push("<a href='" + obj["url"] + "'  >" + b + "</a>" + "<br><br>");
-                                recordfb.push("<a href='" + obj["url"] + "'  >" + obj["url"] + "</a>" + "<br><br>");
+                                recordfb.push(obj["url"]);
                             }
                             else {
                                 var c = obj["url"].slice(25, obj["url"].length);
                                 recordfb1.push("<a href='" + obj["url"] + "'  >" + c + "</a>" + "<br><br>");
-                                recordfb.push("<a href='" + obj["url"] + "'  >" + obj["url"] + "</a>" + "<br><br>");
+                                recordfb.push(obj["url"]);
                             }
 
 
@@ -82,6 +82,7 @@
                         //771bf09f285365e0c4454a832fb55618
                         //f3f7f89be89f4d96950fee9e38aa50b1
                         //62eca409b57b0137e88508d5f931271c
+                          //09a6312abd7970cb42378e0de709ab3a
                     }
                     //console.log(recordfb);
                     $('#msgfb').html(recordfb1);
