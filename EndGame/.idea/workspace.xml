@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b777e354-3ade-4c29-bc0b-e757dd3fea61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/customers.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,14 +15,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainapp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="184">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/customers.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="130" column="61" lean-forward="true" selection-start-line="130" selection-start-column="61" selection-end-line="130" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -45,7 +54,6 @@
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/sih/login form/login.html" />
         <option value="$PROJECT_DIR$/EndGame/urls.py" />
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/login.html" />
-        <option value="$PROJECT_DIR$/mainapp/templates/mainapp/customers.html" />
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/home.html" />
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/searchdetails.html" />
         <option value="$PROJECT_DIR$/mainapp/urls.py" />
@@ -53,6 +61,7 @@
         <option value="$PROJECT_DIR$/mainapp/static/mainapp/searchdetails/search.js" />
         <option value="$PROJECT_DIR$/mainapp/views.py" />
         <option value="$PROJECT_DIR$/mainapp/models.py" />
+        <option value="$PROJECT_DIR$/mainapp/templates/mainapp/customers.html" />
       </list>
     </option>
   </component>
@@ -77,6 +86,19 @@
             <path>
               <item name="EndGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="EndGame" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EndGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EndGame" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EndGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EndGame" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="mainapp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -176,7 +198,7 @@
       <workItem from="1551085715211" duration="3702000" />
       <workItem from="1551167945408" duration="4689000" />
       <workItem from="1551446869558" duration="329000" />
-      <workItem from="1551496658645" duration="4367000" />
+      <workItem from="1551496658645" duration="4762000" />
     </task>
     <task id="LOCAL-00001" summary="models.py update1">
       <created>1550797483087</created>
@@ -304,11 +326,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551497023784</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added get and set Image">
+      <created>1551502144110</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1551502144110</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53431000" />
+    <option name="totallyTimeSpent" value="53826000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -376,7 +405,8 @@
     <MESSAGE value="cookie logout successs!!" />
     <MESSAGE value="email notification done" />
     <MESSAGE value="just check" />
-    <option name="LAST_COMMIT_MESSAGE" value="just check" />
+    <MESSAGE value="added get and set Image" />
+    <option name="LAST_COMMIT_MESSAGE" value="added get and set Image" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mainapp/apps.py">
@@ -434,13 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="24" column="100" selection-start-line="24" selection-start-column="100" selection-end-line="24" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/customers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -517,11 +540,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mainapp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="184">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/customers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="130" column="61" lean-forward="true" selection-start-line="130" selection-start-column="61" selection-end-line="130" selection-end-column="61" />
         </state>
       </provider>
     </entry>

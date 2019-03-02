@@ -125,7 +125,7 @@
 				
 				<table id="fresh-table" class="table">
 					<thead>
-						<th data-field="id">S.No</th>
+						<th data-field="id" data-sortable="true">S.No</th>
 						<th data-field="name" data-sortable="true">Name</th>
 						<th data-field="salary" data-sortable="true">Maturity Date</th>
 						<th data-field="country" data-sortable="true">Type Of Customer</th>
@@ -138,7 +138,7 @@
 						{% for customer in customers %}
 						<tr>
 							<td>{{ customer.pk }}</td>
-							<td>{{ customer.first_name }}</td>
+							<td>{{ customer.name }}</td>
 							<td>{{ customer.maturityDate }}</td>
 							<td>Premium</td>
 							<td></td>
