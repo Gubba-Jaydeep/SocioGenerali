@@ -1,5 +1,6 @@
 from django.db import models
 import pymongo
+import base64
 # Create your models here.
 
 class CustomerDatabase:
@@ -10,19 +11,36 @@ class CustomerDatabase:
     def getData(self):
         mycol = self.mydb["data"]
         res = []
-        for x in mycol.find({},{"_id": 0,"pk":1 , "first_name": 1, "email": 1, "phoneNumber": 1, "policyNumber": 1, "maturityDate": 1}):
+        for x in mycol.find({},{"_id": 0,"address":0}):
             res.append(x)
         return res
 
     def getDataFromPk(self,pk):
         mycol=self.mydb["data"]
-        x=mycol.find_one({"pk":pk},{"_id": 0,"pk":1 , "first_name": 1, "email": 1, "phoneNumber": 1, "policyNumber": 1, "maturityDate": 1})
+        x=mycol.find_one({"pk":pk},{"_id": 0,"address":0})
         if x == None:
             return False
         else:
             return x
 
-    '''def insertData(self,name,phoneNumber,email,dateOfBirth,gender,password,location=None,policyNumber=None,cliendID=None):
+    def setImage(self,path,pk):
+        mycol = self.mydb["data"]
+        with open(path, "rb") as imageFile:
+            str = base64.b64encode(imageFile.read())
+            mycol.update_one({"pk":pk},{"$set":{"image":str}})
+
+
+
+
+    def getImage(self,pk):
+        mycol = self.mydb["data"]
+        res=mycol.find_one({"pk":pk})
+        fh = open("mainapp/static/mainapp/cusImages/test.jpg", "wb")
+        fh.write(base64.b64decode(res["image"]))
+        fh.close()
+
+
+    def insertData(self,name,phoneNumber,email,dateOfBirth,gender,password,location=None,policyNumber=None,cliendID=None):
         mycol = self.mydb["data"]
         if mycol.find_one({"email":email})==None:
             x = mycol.insert_one({"name":name,"phoneNumber":phoneNumber,"email":email,"dateOfBirth":dateOfBirth,"gender":gender,"password":password,"location":location,"policyNumber":policyNumber,"cliendID":cliendID})
@@ -30,6 +48,7 @@ class CustomerDatabase:
         else:
             return False
 
+    '''
     def insertHistory(self,email,time):
         mycol = self.mydb["history"]
         if mycol.find_one({"email":email})==None:
