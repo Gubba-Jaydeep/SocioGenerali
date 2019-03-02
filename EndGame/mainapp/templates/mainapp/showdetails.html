@@ -145,10 +145,10 @@
 
 							<div class="profile-user-info">
 								<div class="profile-info-row">
-									<div class="profile-info-name"> Username </div>
+									<div class="profile-info-name"> Name </div>
 
 									<div class="profile-info-value">
-										<span id="uname">{{ customer.first_name }}</span>
+										<span id="uname">{{ customer.name }}</span>
 									</div>
 								</div>
 
@@ -181,9 +181,9 @@
 								</div>
 
 								<div class="profile-info-row">
-									<div class="profile-info-name"> Policy Number </div>
+									<div class="profile-info-name"> DateOfBirth </div>
 									<div class="profile-info-value">
-										<span>{{ customer.policyNumber }}</span>
+										<span>{{ customer.dob}}</span>
 									</div>
 								</div>
 							</div>
@@ -211,10 +211,10 @@
 
 							<div class="profile-user-info">
 								<div class="profile-info-row">
-									<div class="profile-info-name"> Other contacts </div>
+									<div class="profile-info-name"> Gender </div>
 
 									<div class="profile-info-value">
-										<a href="#" target="_blank">www.alexdoe.com</a>
+										<a href="#" target="_blank">{{ customer.gender }}</a>
 									</div>
 								</div>
                             </div>

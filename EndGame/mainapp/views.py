@@ -16,7 +16,8 @@ def login(request):
     psw = request.GET['pass']
     try:
         if dict_of_officials[uname] == psw:
-            response=render(request, 'mainapp/home.html', {'uname': uname})
+            user = db.getDataFromEmail(uname)
+            response=render(request, 'mainapp/home.html', {'user': user})
             response.set_cookie("loggedIn",True)
             response.set_cookie("userName", uname)
             return response
@@ -32,7 +33,8 @@ def dashboard(request):
         f.write(str(request))'''
     if request.COOKIES.get("loggedIn",None):
         db = AdvisorDatabase()
-        user = db.getDataFromEmail()
+        email=request.COOKIES.get("userName")
+        user = db.getDataFromEmail(email)
         return render(request, 'mainapp/home.html', {'user': user})
     else:
         return render(request, 'mainapp/login.html', {})
