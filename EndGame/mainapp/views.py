@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.template import loader
 from .models import AdvisorDatabase, CustomerDatabase
 from django.http import HttpResponseRedirect
-
+from selenium import webdriver
+from PIL import Image
 # Create your views here.
 
 def index(request):
@@ -74,3 +75,30 @@ def searchDetails(request):
 
 def sendEmail(request):
     return HttpResponseRedirect("https://mail.google.com/mail/?view=cm&fs=1&to=neotrix1111@gmail.com&su=SUBJECT&body=BODY&bcc=someone.else@example.com")
+
+
+def grabPhoto(request):
+    links = request.GET['photoLinks']
+    links = links.split(",")
+    index=0
+    driver = webdriver.Chrome(executable_path='D:/chromedriver.exe')
+    for link in links:
+        driver.get(link)
+        ss = driver.save_screenshot('ss'+str(index)+'.jpg')
+        index+=1
+    driver.quit()
+    #all photos are stored in mainapp level
+    #harsha has to write code for comparing the photos
+    for x in range(index):
+        if '/public/' in links[x]:
+            img_obj=Image.open('ss'+str(x)+'.jpg')
+            crop_img=img_obj.crop((211, 315, 295, 395))
+            crop_img.save('ss'+str(x)+'.png')
+        else:
+            img_obj = Image.open('ss' + str(x) + '.jpg')
+            crop_img = img_obj.crop((101, 257, 265, 420))
+            crop_img.save('ss' + str(x) + '.png')
+    return render(request,'mainapp/screenShotDone.html',{})
+
+
+
