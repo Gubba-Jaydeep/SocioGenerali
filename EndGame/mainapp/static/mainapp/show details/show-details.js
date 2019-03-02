@@ -22,7 +22,7 @@
                  document.getElementById("name").innerHTML=name;
             //var name=$(".name").val();
             //var fail='https://api.social-searcher.com/v2/search?q=%22Monthly%20fails%22&type=video&network=youtube,dailymotion&limit=100&key=f3f7f89be89f4d96950fee9e38aa50b1';
-            var url='https://api.social-searcher.com/v2/search?q='+name+'&key=09a6312abd7970cb42378e0de709ab3a';
+            var url='https://api.social-searcher.com/v2/search?q='+name+'&key=62eca409b57b0137e88508d5f931271c';
 
 
                 $.getJSON(url,function(data){
@@ -45,24 +45,36 @@
                                 var a1 = [];
 
                                 var a = obj["url"].slice(32, obj["url"].length);
-                                a1 = a.split("//");
-                                recordfb1.push("<a href='" + a + "'  >" + a1[0] + "</a>" + "<br><br>");
+                                var a1 = obj["url"].slice(32, 32 + name.length);
+                                //var a2= obj["url"].slice(32, 32+name.length+1);
+                                //var a3= obj["url"].slice(32, 32+name.length+0);
+
+                                //if (a1.length==name.length+1||a1.length==name.length) {
+                                recordfb1.push("<a href='" + obj["url"] + "'  >" + a1 + "</a>" + "<br><br>");
                                 recordfb.push(obj["url"]);
+                                // }
                             }
                             else if (obj["url"].match(pp)) {
+
                                 var b = obj["url"].slice(32, obj["url"].length);
-                                recordfb1.push("<a href='" + obj["url"] + "'  >" + b + "</a>" + "<br><br>");
-                                recordfb.push(obj["url"]);
+                                var a1 = obj["url"].slice(32, 32 + name.length);
+
+                                //   if (b==b1||b==b2||b==b3) {
+                                if (a1.length == name.length + 1 || a1.length == name.length) {
+                                    recordfb1.push("<a href='" + obj["url"] + "'  >" + a1 + "</a>" + "<br><br>");
+                                    recordfb.push(obj["url"]);
+                                    // }
+                                }
                             }
                             else {
+
                                 var c = obj["url"].slice(25, obj["url"].length);
-                                recordfb1.push("<a href='" + obj["url"] + "'  >" + c + "</a>" + "<br><br>");
-                                recordfb.push(obj["url"]);
+                                var a1 = obj["url"].slice(32, 32 + name.length);
+
+
+                                // console.log(obj["url"]);
+                                //recordfb.push("<a href='" + obj["url"] + "'  >" + obj["url"] + "</a>" + "<br><br>");
                             }
-
-
-                            // console.log(obj["url"]);
-                            //recordfb.push("<a href='" + obj["url"] + "'  >" + obj["url"] + "</a>" + "<br><br>");
                         }
                     }
                         for(var j =0;j<data.posts.length;j++){
