@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.template import loader
 from .models import AdvisorDatabase, CustomerDatabase
 from django.http import HttpResponseRedirect
-
+from selenium import webdriver
 # Create your views here.
 
 def index(request):
@@ -74,3 +74,17 @@ def searchDetails(request):
 
 def sendEmail(request):
     return HttpResponseRedirect("https://mail.google.com/mail/?view=cm&fs=1&to=neotrix1111@gmail.com&su=SUBJECT&body=BODY&bcc=someone.else@example.com")
+
+
+def grabPhoto(request):
+    links = request.GET['photoLinks']
+    links = links.split(",")
+
+    driver = webdriver.Chrome(executable_path='D:/chromedriver.exe')
+    driver.get(links[0])
+    ss=driver.save_screenshot('ss1.jpg')
+    driver.quit()
+    return render(request,'mainapp/screenShotDone.html',{})
+
+
+
