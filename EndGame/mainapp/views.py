@@ -6,6 +6,11 @@ from django.http import HttpResponseRedirect
 # Create your views here.
 
 def index(request):
+    if request.COOKIES.get("loggedIn",None):
+        db = AdvisorDatabase()
+        email=request.COOKIES.get("userName")
+        user = db.getDataFromEmail(email)
+        return render(request, 'mainapp/home.html', {'user': user})
     return render(request, 'mainapp/login.html', {})
 
 def login(request):
