@@ -31,7 +31,9 @@ def dashboard(request):
     '''with open("./mklog.txt","wt") as f:
         f.write(str(request))'''
     if request.COOKIES.get("loggedIn",None):
-        return render(request, 'mainapp/home.html', {'uname': request.COOKIES.get("userName")})
+        db = AdvisorDatabase()
+        user = db.getDataFromUname()
+        return render(request, 'mainapp/home.html', {'user': user})
     else:
         return render(request, 'mainapp/login.html', {})
 
