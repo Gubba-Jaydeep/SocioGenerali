@@ -35,7 +35,7 @@ class CustomerDatabase:
     def getImage(self,pk):
         mycol = self.mydb["data"]
         res=mycol.find_one({"pk":pk})
-        fh = open("mainapp/static/mainapp/cusImages/test.jpg", "wb")
+        fh = open("test.jpg", "wb")
         fh.write(base64.b64decode(res["image"]))
         fh.close()
 
@@ -47,7 +47,6 @@ class CustomerDatabase:
             return True
         else:
             return False
-
     '''
     def insertHistory(self,email,time):
         mycol = self.mydb["history"]
