@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>SS</title>
+    <style>
+        .result{
+
+        }
+    </style>
 </head>
+
 <body>
-ss done....
+
+    {% for key,value in di.items %}
+    <a href="{{ key }}" class="result">{{ key }} : {{ value }}</a>
+    <br>
+    <br>
+    {% endfor %}
 </body>
+<!--<script>-->
+    <!--var s=document.getElementById("prob").innerHTML;-->
+<!--//console.log(s);-->
+<!--var myarray = s.split(',');-->
+<!--//document.getElementById("result").innerHTML=myarray;-->
+<!--//console.log("break");-->
+<!--var result1=[];-->
+<!--for(var i = 0; i < myarray.length; i++)-->
+<!--{   console.log("break2");-->
+   <!--// document.getElementById("result").innerHTML=myarray[i];-->
+    <!--result1.push(myarray[i]);-->
+   <!--console.log(myarray[i]);-->
+<!--}-->
+<!--document.getElementById("result").innerHTML=result1;-->
+
+<!--</script>-->
 </html>

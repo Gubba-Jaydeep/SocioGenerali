@@ -75,28 +75,25 @@ padding-left:400px;" src = "{% static 'mainapp/searchdetails/loader.gif' %}"></d
 </div> -->
 
       <div class="content" >
-          <div>
-        <script>
-            (function() {
-              var cx = '009198650927089725781:dldxkbadqr8';
-              var gcse = document.createElement('script');
-              gcse.type = 'text/javascript';
-              gcse.async = true;
-              gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-              var s = document.getElementsByTagName('script')[0];
-              s.parentNode.insertBefore(gcse, s);
-            })();
-          </script>
-          <gcse:search></gcse:search>
-    </div>
+
+
 
         <div class="row" style="margin-top: -20px">
           <div class="col-md-12">
         <div style="display: block;margin-left: auto;margin-right: auto;width: 20%;">
             <img src="{% static 'mainapp/searchdetails/user.png' %}" alt="">
             <h4 style="margin-top:14px"><span id="name"></span></h4>
+            <div>
+          <form method="get" action="{% url 'mainapp:grabPhoto' %}">
+     {% csrf_token %}
+      <textarea name="photoLinks" id="txtar" style="display: none"></textarea>
+
+              <button type="submit" id="imageprocess" style="background: linear-gradient(pink,blue,green);border-radius: 5px;color:white;font-family: 'Montserrat';margin-left: 12px;border-color: #007bff;cursor: pointer;height: 30px;width: 63%;font-weight: bolder;">Process Images</button>
+ </form>
+          </div>
         </div>
     <div class="container" style="padding-top: 10px">
+        <h3 class="title">RECOMMENDED RESULTS:</h3><br>
         <div class="row">
             <div class="col-md-4 col-sm-5">
                 <div class="pricingTable">
@@ -135,12 +132,7 @@ padding-left:400px;" src = "{% static 'mainapp/searchdetails/loader.gif' %}"></d
         </div>
     </div>
 </div>
- <form method="get" action="{% url 'mainapp:grabPhoto' %}">
-     {% csrf_token %}
-      <textarea rows="10" cols="50" name="photoLinks" id="txtar"></textarea>
 
-<button type="submit">click</button>
- </form>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="{% static 'mainapp/assets/js/core/jquery.min.js' %}"></script>
