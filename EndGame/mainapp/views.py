@@ -122,9 +122,9 @@ def grabPhoto(request):
     for x in range(index):
         img2 = 'ss' + str(x) + '.png'
         ans = faceVerify(img1,img2)
-        di[links[x]]=ans
-
-
+        if ans is not None:
+            di[ans]=links[x]
+    di= dict(sorted(di.items()))
     return render(request,'mainapp/screenShotDone.html',{'di':di})
 
 def getFaceId(path):

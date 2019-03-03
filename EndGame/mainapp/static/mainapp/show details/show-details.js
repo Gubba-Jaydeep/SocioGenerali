@@ -22,7 +22,7 @@
                  document.getElementById("name").innerHTML=name;
             //var name=$(".name").val();
             //var fail='https://api.social-searcher.com/v2/search?q=%22Monthly%20fails%22&type=video&network=youtube,dailymotion&limit=100&key=f3f7f89be89f4d96950fee9e38aa50b1';
-            var url='https://api.social-searcher.com/v2/search?q='+name+'&key=62eca409b57b0137e88508d5f931271c';
+            var url='https://api.social-searcher.com/v2/search?q='+name+'&key=9c0ad6624eb17caf6e1f3b156e62d5c6';
 
 
                 $.getJSON(url,function(data){
