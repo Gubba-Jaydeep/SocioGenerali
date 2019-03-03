@@ -22,7 +22,7 @@
                  document.getElementById("name").innerHTML=name;
             //var name=$(".name").val();
             //var fail='https://api.social-searcher.com/v2/search?q=%22Monthly%20fails%22&type=video&network=youtube,dailymotion&limit=100&key=f3f7f89be89f4d96950fee9e38aa50b1';
-            var url='https://api.social-searcher.com/v2/search?q='+name+'&key=9c0ad6624eb17caf6e1f3b156e62d5c6';
+            var url='https://api.social-searcher.com/v2/search?q='+name+'&key=fa9330bda692b55c3507a60fe5c02c90';
 
 
                 $.getJSON(url,function(data){
@@ -32,7 +32,7 @@
                     var recordtw1=[];
                     var recordothers=[];
                     var recordothers1=[];
-
+                    var urlName = name1.replace(" ",".");
 
                     var fb=/facebook/i;
                     var tw=/twitter/i;
@@ -80,19 +80,32 @@
                             recordothers.push("<a href='"+obj["url"]+"'  >"+ obj["url"] + "</a>"+"<br><br>");
 
                             recordothers1.push(obj["url"]);
+                            console.log(typeof obj['url']);
                              }
 
                         //771bf09f285365e0c4454a832fb55618
                         //f3f7f89be89f4d96950fee9e38aa50b1
                         //62eca409b57b0137e88508d5f931271c
                           //09a6312abd7970cb42378e0de709ab3a
+                          //fa9330bda692b55c3507a60fe5c02c90
                     }
+                   console.log(recordfb+recordothers1+recordtw1+","+name1);
 
                     $('#msgfb').html(recordfb1);
                     $('#msgtw').html(recordtw);
                     $('#msgot').html(recordothers);
-                   console.log(recordfb+recordothers1+recordtw1);
-                    document.getElementById("txtar").innerHTML=recordfb+recordothers1+recordtw1;
+                    var l1=name1;
+var ar=l1.split(' ');
+//console.log(ar);
+//ar=['uhuehdu','jdijeid'];
+var l2='https://www.facebook.com/';
+var l3=ar.join('.');
+console.log(l2+l3.slice(1,l3.length-1));
+abc=l2+l3.slice(1,l3.length-1);
+//console.log(ar+l2+l3)
+                    document.getElementById("txtar").innerHTML=abc+","+recordfb+recordothers1+recordtw1;
+                    console.log("--------------");
+                    console.log(abc+","+recordfb+recordothers1+recordtw1);
 
 
         });

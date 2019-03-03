@@ -32,12 +32,13 @@ class CustomerDatabase:
 
 
 
-    def getImage(self,pk):
+    def getImage(self,uname):
         mycol = self.mydb["data"]
-        res=mycol.find_one({"pk":pk})
-        fh = open("mainapp/static/mainapp/cusImages/test.jpg", "wb")
+        res=mycol.find_one({"name":uname})
+        fh = open("test.jpg", "wb")
         fh.write(base64.b64decode(res["image"]))
         fh.close()
+        return "test.jpg"
 
 
     def insertData(self,name,phoneNumber,email,dateOfBirth,gender,password,location=None,policyNumber=None,cliendID=None):

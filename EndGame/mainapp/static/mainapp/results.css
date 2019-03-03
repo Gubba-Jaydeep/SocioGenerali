@@ -1,0 +1,61 @@
+html { 
+    background: url(1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+.container{
+    padding: 2% 2% 0;
+    text-align: justify;
+    color: #2c2c2c
+  }
+  
+  .container:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+  #content{
+    color: whitesmoke;
+  }
+  a{
+      text-decoration: none;
+  }
+  .container .item,
+  .container .gap{
+    display: inline-block;
+    width: 49%;
+    border:5px;
+    border-color: #2c2c2c;
+  }
+  
+  .container .item{
+    text-align: center;
+    background:rgba(128,128,128,0.9);
+    width: 390px;
+    height: 125px;
+    border-radius: 7px;
+
+    /*display: none; <-- uncomment this rule for use with MixItUp */
+  }
+  
+  .container .item:before{
+    content: '';
+    display: inline-block;
+    padding: 10px;
+  }
+  
+  @media all and (min-width: 420px){
+    .container .item,
+    .container .gap{
+      width: 32%;
+    }
+  }
+  
+  @media all and (min-width: 640px){
+    .container .item,
+    .container .gap{
+      width: 23.5%;
+    }
+  }
