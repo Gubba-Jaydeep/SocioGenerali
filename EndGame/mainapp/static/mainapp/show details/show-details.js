@@ -91,7 +91,7 @@
                     $('#msgfb').html(recordfb1);
                     $('#msgtw').html(recordtw);
                     $('#msgot').html(recordothers);
-                   console.log(recordfb);
+                   console.log(recordfb+recordothers1+recordtw1);
                     document.getElementById("txtar").innerHTML=recordfb+recordothers1+recordtw1;
 
 
