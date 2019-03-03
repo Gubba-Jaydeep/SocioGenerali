@@ -57,7 +57,7 @@ def logout(request):
 def myCustomers(request):
     if request.COOKIES.get("loggedIn"):
         db = CustomerDatabase()
-        customers= db.getData()[:10]
+        customers= db.getData()[:20]
         return render(request, 'mainapp/customers.html' ,{'customers' : customers})
     else:
         return render(request, 'mainapp/login.html', {})
