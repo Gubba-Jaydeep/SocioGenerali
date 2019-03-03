@@ -97,27 +97,8 @@ def grabPhoto(request):
             img_obj = Image.open('ss' + str(x) + '.png')
             crop_img = img_obj.crop((101, 257, 265, 420))
             crop_img.save('ss' + str(x) + '.png')
-    #harsha has to write code for comparing the photos
-    # srcImage = Image.open('src.png')
-    # srcImage = srcImage.resize((400, 400) ,Image.ANTIALIAS)
-    di={}
-    # for x in range(index):
-    #     desImg = Image.open('ss' + str(x) + '.png')
-    #     desImg = desImg.resize((400, 400) ,Image.ANTIALIAS)
-    #
-    #     assert srcImage.mode == desImg.mode, "different kinds of images"
-    #     assert srcImage.size == desImg.size, "different sizes"
-    #
-    #     pairs = zip(srcImage.getdata(), desImg.getdata())
-    #     dif=0
-    #     if len(srcImage.getbands()) == 1:
-    #         #for gray-scale jpegs
-    #         dif=sum(abs(p1-p2) for p1,p2 in pairs)
-    #     else:
-    #         dif=sum(abs(c1-c2) for p1, p2 in pairs for c1, c2 in zip(p1, p2))
-    #     noComponents = srcImage.size[0] * srcImage.size[1] * 3
-    #     di[str((dif/255.0 *100)/noComponents)]="<a href='"+links[x]+"'> JD </a>"
 
+    di={}
     img1='src.png'
     for x in range(index):
         img2 = 'ss' + str(x) + '.png'
@@ -176,21 +157,10 @@ def getFaceId(path):
 def faceVerify(im1,im2):
     import requests
 
-    # Replace 'KEY_1' with your subscription key as a string
     subscription_key = 'a8304edad2824566a6ed18bd6b6a34b4'
-    #filename = path
-    # Replace or verify the region.
-    #
-    # You must use the same region in your REST API call as you used to obtain your subscription keys.
-    # For example, if you obtained your subscription keys from the westus region, replace
-    # "westcentralus" in the URI below with "westus".
-    #
-    # NOTE: Free trial subscription keys are generated in the westcentralus region, so if you are using
-    # a free trial subscription key, you should not need to change this region.
+
     uri_base = 'https://westcentralus.api.cognitive.microsoft.com'
-    # Request headers
-    # for locally stored image files use
-    # 'Content-Type': 'application/octet-stream'
+
     headers = {
         'Content-Type': 'application/json',
         'Ocp-Apim-Subscription-Key': subscription_key,
