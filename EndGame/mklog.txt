@@ -1,1 +1,1 @@
-<WSGIRequest: GET '/dashboard?csrfmiddlewaretoken=rqwl9IcgsPC1yniHl2Iiqoe0X2lvo4wN45mGOyelzGWSAeJVZdAa0SMbzup6cJLh&selLoginWith=UID&username=as&pass=sasa'>
+{0.81376: 'https://www.facebook.com/Jaydeep.Gubba'}

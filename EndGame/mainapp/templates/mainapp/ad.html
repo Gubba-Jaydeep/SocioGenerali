@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load staticfiles %}
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<link rel="stylesheet" href="{% static 'mainapp/results.css %}">
+	<title>Results</title>
+	<link rel="stylesheet" href="{% static 'mainapp/results.css' %}" >
 </head>
 <body>
-		<div class="bg"></div>
+
+
+
 	<div class="container">
+		<h1>RESULTS</h1>
 		{% for key,value in di.items %}
-		<div class="item"><a href="{{ value }}"><h3 id="content" >{{ key }} : {{ value }}</h3></a></div>
+		<div class="item">
+			<h3 id="content" >Found in this link {{ value }} with {{ key }} probabilty.<a href="{{ value }}">CLICK</a></h3>
+
+		</div>
 		{% endfor %}
 	</div>
+
 </body>
 </html>

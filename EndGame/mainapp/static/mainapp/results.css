@@ -1,10 +1,27 @@
 html { 
-    background: url(1.jpg) no-repeat center center fixed; 
+    background: url("1.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
+h1{
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+h3{
+  color: black;
+  font-size: 30px;
+  height: 50px;
+  line-height: 50px;
+  background-color: white;
+}
+a{
+  display: inline-block;
+  background-color: magenta;
+  color: #1b1e21;
+}
 .container{
     padding: 2% 2% 0;
     text-align: justify;
@@ -25,19 +42,19 @@ html {
   .container .item,
   .container .gap{
     display: inline-block;
-    width: 49%;
+    width: 98%;
     border:5px;
     border-color: #2c2c2c;
+    margin: auto;
   }
   
   .container .item{
     text-align: center;
     background:rgba(128,128,128,0.9);
-    width: 390px;
-    height: 125px;
-    border-radius: 7px;
+    width: 98%;
+    height: 105px;
+    box-shadow: 1px 1px 5px black;
 
-    /*display: none; <-- uncomment this rule for use with MixItUp */
   }
   
   .container .item:before{
@@ -59,3 +76,4 @@ html {
       width: 23.5%;
     }
   }
+

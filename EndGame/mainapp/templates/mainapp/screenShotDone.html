@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>SS</title>
+    <title>Results</title>
     <style>
-        .result{
+        body{
+            background-image: url("../../static/mainapp/bg.jpg");
+            background-size: cover;
+            background-color: #1b1e21;
+        }
 
+        h1{
+            font-size: 50px;
+            color: ghostwhite;
+            text-align: center;
+        }
+        .result{
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            background: rgba(255,255,255,0.7);
+            color:black;
+            width: 90%;
+            margin: auto;
+            box-shadow: 1px 1px 4px black;
+            padding: 7px;
+        }
+
+        a{
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            width: 15%;
+            position: relative;
+            float: right;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-
+<h1>R E S U L T S</h1>
+    {% if di %}
     {% for key,value in di.items %}
-    <a href="{{ value }}" class="result">{{ key }} : {{ value }}</a>
-    <br>
-    <br>
+    <h2  class="result">Found in {{ value }} with {{ key }} probability<a href="{{ value }}">CLICK</a></h2>
     {% endfor %}
+    {% else %}
+    <h1>No dict found</h1>
+    {% endif %}
 </body>
-<!--<script>-->
-    <!--var s=document.getElementById("prob").innerHTML;-->
-<!--//console.log(s);-->
-<!--var myarray = s.split(',');-->
-<!--//document.getElementById("result").innerHTML=myarray;-->
-<!--//console.log("break");-->
-<!--var result1=[];-->
-<!--for(var i = 0; i < myarray.length; i++)-->
-<!--{   console.log("break2");-->
-   <!--// document.getElementById("result").innerHTML=myarray[i];-->
-    <!--result1.push(myarray[i]);-->
-   <!--console.log(myarray[i]);-->
-<!--}-->
-<!--document.getElementById("result").innerHTML=result1;-->
 
-<!--</script>-->
 </html>

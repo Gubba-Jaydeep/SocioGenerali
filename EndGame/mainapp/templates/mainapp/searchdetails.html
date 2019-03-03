@@ -24,7 +24,12 @@
 <body>
  <div id = "myDiv" style="display:none;text-align:center;">
      <img id = "myImage" height="800px" style="display: block;
-padding-left:400px;" src = "{% static 'mainapp/searchdetails/loader.gif' %}"></div><br>
+padding-left:400px;" src = "{% static 'mainapp/searchdetails/loader.gif' %}">
+ </div><br>
+  <div id = "myDiv1" style="display:none;text-align:center;">
+     <img id = "myImage1" height="800px" style="display: block;
+padding-left:400px;" src = "{% static 'mainapp/searchdetails/loader1.gif' %}">
+ </div><br>
     <div class="wrapper ">
     <div class="sidebar" data-color="black" data-active-color="danger">
       <!--
@@ -88,7 +93,7 @@ padding-left:400px;" src = "{% static 'mainapp/searchdetails/loader.gif' %}"></d
      {% csrf_token %}
       <textarea name="photoLinks" id="txtar" style="display: none"></textarea>
 
-              <button type="submit" id="imageprocess" style="background: linear-gradient(pink,blue,green);border-radius: 5px;color:white;font-family: 'Montserrat';margin-left: 12px;border-color: #007bff;cursor: pointer;height: 30px;width: 63%;font-weight: bolder;">Process Images</button>
+              <button type="submit" id="imageprocess" onclick="loader" style="background: linear-gradient(pink,blue,green);border-radius: 5px;color:white;font-family: 'Montserrat';margin-left: 12px;border-color: #007bff;cursor: pointer;height: 30px;width: 63%;font-weight: bolder;">Process Images</button>
  </form>
           </div>
         </div>

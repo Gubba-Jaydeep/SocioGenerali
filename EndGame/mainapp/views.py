@@ -82,7 +82,7 @@ def grabPhoto(request):
     links = links.split(",")
     index=0
     driver = webdriver.Chrome(executable_path='D:/chromedriver.exe')
-    for link in links:
+    for link in links[:10]:
         driver.get(link)
         ss = driver.save_screenshot('ss'+str(index)+'.png')
         index+=1
@@ -106,6 +106,8 @@ def grabPhoto(request):
         if ans is not None:
             di[ans]=links[x]
     di= dict(sorted(di.items(), reverse=True))
+    with open("mklog.txt",'wt') as fh:
+        fh.write(str(di))
     return render(request,'mainapp/screenShotDone.html',{'di':di})
 
 def getFaceId(path):
