@@ -87,11 +87,12 @@ padding-left:400px;" src = "{% static 'mainapp/searchdetails/loader1.gif' %}">
           <div class="col-md-12">
         <div style="display: block;margin-left: auto;margin-right: auto;width: 20%;">
             <img src="{% static 'mainapp/searchdetails/user.png' %}" alt="">
-            <h4 style="margin-top:14px"><span id="name"></span></h4>
+
             <div>
           <form method="get" action="{% url 'mainapp:grabPhoto' %}">
      {% csrf_token %}
       <textarea name="photoLinks" id="txtar" style="display: none"></textarea>
+              <input type="text" style="margin-top:14px" id="name" name="user" />
 
               <button type="submit" id="imageprocess" onclick="loader" style="background: linear-gradient(pink,blue,green);border-radius: 5px;color:white;font-family: 'Montserrat';margin-left: 12px;border-color: #007bff;cursor: pointer;height: 30px;width: 63%;font-weight: bolder;">Process Images</button>
  </form>

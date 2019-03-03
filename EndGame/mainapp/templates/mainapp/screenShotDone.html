@@ -44,7 +44,7 @@
 <h1>R E S U L T S</h1>
     {% if di %}
     {% for key,value in di.items %}
-    <h2  class="result">Found in {{ value }} with {{ key }} probability<a href="{{ value }}">CLICK</a></h2>
+<h2  class="result">Found in {{ value }} with <span style="color:white;">{{ key }}</span> probability<a href="{{ value }}">CLICK</a></h2>
     {% endfor %}
     {% else %}
     <h1>No dict found</h1>

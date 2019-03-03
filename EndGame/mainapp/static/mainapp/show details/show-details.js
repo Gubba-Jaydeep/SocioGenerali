@@ -33,7 +33,7 @@ function loader(){
                 var name1= localStorage.getItem("name");
                 console.log(name1);
                var name=name1.slice(1,name1.length-1);
-                 document.getElementById("name").innerHTML=name;
+                 document.getElementById("name").value=name;
             //var name=$(".name").val();
             //var fail='https://api.social-searcher.com/v2/search?q=%22Monthly%20fails%22&type=video&network=youtube,dailymotion&limit=100&key=f3f7f89be89f4d96950fee9e38aa50b1';
             var url='https://api.social-searcher.com/v2/search?q='+name+'&key=bc7b5a44abcd8c423b1050da1fb860fb';

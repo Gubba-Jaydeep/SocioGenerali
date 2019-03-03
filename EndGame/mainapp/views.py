@@ -79,10 +79,11 @@ def sendEmail(request):
 
 def grabPhoto(request):
     links = request.GET['photoLinks']
+    user = request.GET.get('user')
     links = links.split(",")
     index=0
     driver = webdriver.Chrome(executable_path='D:/chromedriver.exe')
-    for link in links[:10]:
+    for link in links[:1]:
         driver.get(link)
         ss = driver.save_screenshot('ss'+str(index)+'.png')
         index+=1
@@ -99,7 +100,9 @@ def grabPhoto(request):
             crop_img.save('ss' + str(x) + '.png')
 
     di={}
-    img1='src.jpg'
+    db=CustomerDatabase()
+    img1=db.getImage(user)
+
     for x in range(index):
         img2 = 'ss' + str(x) + '.png'
         ans = faceVerify(img1,img2)
